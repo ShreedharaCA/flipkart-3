@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<!--  Here we set the constant struts.devMode to true, because we are 
+working in development environment and we need to see some useful log messages.  -->
+<constant name="struts.devMode" value="true" />
+<package name="flipkart_group5" extends="struts-default">
+
+<action name="login_action" class="edu.iiitb.flipkart.action.login.LoginAction" method="execute">
+<result name="success">/jsp/admin/admin_home.jsp</result>
+
+</action>
+<!-- adding the advertisement -->
+<action name="addproductforadvertisement" class="edu.iiitb.flipkart.action.admin.advertisement_management.selectProductForAddAdvertisement" method="execute">
+<result name="success">/jsp/admin/advertisement_management/addAdvertisement.jsp</result>
+<result name="failure">/jsp/admin/advertisement_management/addAdvertisement.jsp</result>
+
+</action>
+
+<action name="addadvertisement" class="edu.iiitb.flipkart.action.admin.advertisement_management.Getalreadyadnames" method="execute">
+<result name="success">/jsp/admin/advertisement_management/success.jsp</result>
+
+</action>
+
+<!-- delete advetisement -->
+<action name="selectadheadingtodeletead" class="edu.iiitb.flipkart.action.admin.advertisement_management.selectAdvertisementForDeletion" method="execute">
+<result name="success">/jsp/admin/advertisement_management/deleteAdvertisement.jsp</result>
+
+</action>
+
+<action name="deleteadvertisement" class="edu.iiitb.flipkart.action.admin.advertisement_management.deleteAdvertisementForSelectedAdHeading" method="execute">
+<result name="success">/jsp/admin/advertisement_management/success1.jsp</result>
+
+</action>
+
+
+
+</package>
+</struts>
